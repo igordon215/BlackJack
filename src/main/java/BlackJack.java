@@ -281,4 +281,42 @@ public class BlackJack {
         BlackJack game = new BlackJack(2, 1000);
         game.playGame();
     }
+
+    // New methods for GUI interaction
+    public void dealInitialCardsForGUI() {
+        dealInitialCards();
+    }
+
+    public void hitPlayer(Player player) {
+        player.addCard(deck.drawCard());
+    }
+
+    public void dealerTurnForGUI() {
+        dealerTurn();
+    }
+
+    public Deck getDeck() {
+        return deck;
+    }
+
+    public static int getBlackjackValue() {
+        return BLACKJACK_VALUE;
+    }
+
+    public static double getBlackjackPayout() {
+        return BLACKJACK_PAYOUT;
+    }
+
+    public static int getMinBet() {
+        return MIN_BET;
+    }
+
+    public static int getMaxBet() {
+        return MAX_BET;
+    }
+
+    // New method to reset the deck
+    public void resetDeck() {
+        this.deck = new Deck();
+    }
 }
